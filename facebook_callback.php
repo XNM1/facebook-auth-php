@@ -21,9 +21,9 @@ if (isset($_GET['code'])) {
         $_SESSION['ACCESS_TOKEN'] = $data['access_token'];
         $_SESSION['USER_NAME'] = $info['first_name'] . $info['last_name'];
         $_SESSION['USER_ID'] = $info['id'];
-
-        header("Location: https://$host/index.php");
-        exit();
+		echo $_SESSION['ACCESS_TOKEN'];
+        // header("Location: https://$host/index.php");
+        // exit();
 	}
 }
 else {
