@@ -4,7 +4,7 @@ if (isset($_GET['code'])) {
 	$params = [
 		'client_id'     => $_ENV['FACEBOOK_APP_ID'],
 		'client_secret' => $_ENV['FACEBOOK_APP_SECRET'],
-		'redirect_uri'  => 'https://$host/facebook_callback.php',
+		'redirect_uri'  => "https://$host/facebook_callback.php",
 		'code'          => $_GET['code']
     ];
     $data = file_get_contents('https://graph.facebook.com/v12.0/oauth/access_token?' . urldecode(http_build_query($params)));

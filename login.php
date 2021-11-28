@@ -12,7 +12,7 @@
         $host = $_SERVER['SERVER_NAME'];
         $params = [
             'client_id'     => $_ENV['FACEBOOK_APP_ID'],
-            'redirect_uri'  => 'https://$host/facebook_callback.php',
+            'redirect_uri'  => "https://$host/facebook_callback.php",
             'response_type' => 'code'
         ];
         
