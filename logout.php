@@ -12,8 +12,7 @@
         session_destroy();
 
         $host = $_SERVER['SERVER_NAME'];
-        $port = $_SERVER['SERVER_PORT'];
-        header("Location: https://$host:$port/login.php");
+        header("Location: https://$host/login.php");
         exit();
     }
 ?>

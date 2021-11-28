@@ -1,11 +1,10 @@
 <?php
 $host = $_SERVER['SERVER_NAME'];
-$port = $_SERVER['SERVER_PORT'];
 if (isset($_GET['code'])) {
 	$params = [
 		'client_id'     => $_ENV['FACEBOOK_APP_ID'],
 		'client_secret' => $_ENV['FACEBOOK_APP_SECRET'],
-		'redirect_uri'  => 'https://$host:$port/facebook_callback.php',
+		'redirect_uri'  => 'https://$host/facebook_callback.php',
 		'code'          => $_GET['code']
     ];
     $data = file_get_contents('https://graph.facebook.com/v12.0/oauth/access_token?' . urldecode(http_build_query($params)));
@@ -23,11 +22,11 @@ if (isset($_GET['code'])) {
         $_SESSION['USER_NAME'] = $info['first_name'] . $info['last_name'];
         $_SESSION['USER_ID'] = $info['id'];
 
-        header("Location: https://$host:$port/index.php");
+        header("Location: https://$host/index.php");
         exit();
 	}
 }
 else {
-    header("Location: https://$host:$port/login.php");
+    header("Location: https://$host/login.php");
     exit();
 }
