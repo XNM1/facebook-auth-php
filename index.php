@@ -1,5 +1,5 @@
 <?php
-    if (empty($_SESSION['ACCESS_TOKEN'])) {
+    if (!isset($_SESSION['ACCESS_TOKEN'])) {
         $host = $_SERVER['SERVER_NAME'];
         header("Location: https://$host/login.php", true, 302);
         exit();
