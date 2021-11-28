@@ -1,8 +1,7 @@
 <?php
     if (empty($_SESSION['ACCESS_TOKEN'])) {
         $host = $_SERVER['SERVER_NAME'];
-        $port = $_SERVER['SERVER_PORT'];
-        header("Location: https://$host:$port/login.php", true, 302);
+        header("Location: https://$host/login.php", true, 302);
         exit();
     }
 ?>
