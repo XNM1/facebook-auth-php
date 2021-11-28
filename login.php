@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION['ACCESS_TOKEN'])) {
+        $host = $_SERVER['SERVER_NAME'];
+        header("Location: https://$host/index.php", true, 302);
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
