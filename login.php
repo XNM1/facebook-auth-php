@@ -17,7 +17,7 @@
         ];
         
         $url = 'https://www.facebook.com/v12.0/dialog/oauth?' . urldecode(http_build_query($params));
-        echo '<button><a href="">Login</a></button>';
+        echo '<button><a href="' . $url . '">Login</a></button>';
     ?>
 </body>
 </html>
