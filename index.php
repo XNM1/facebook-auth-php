@@ -1,8 +1,9 @@
 <?php
-    if (!isset($_SESSION['ACCESS_TOKEN'])) {
-        $host = $_SERVER['SERVER_NAME'];
-        header("Location: https://$host/login.php", true, 302);
-        exit();
+    if (empty($_SESSION['ACCESS_TOKEN'])) {
+        // $host = $_SERVER['SERVER_NAME'];
+        // header("Location: https://$host/login.php", true, 302);
+        // exit();
+        echo "hell world" . session_id();
     }
 ?>
 <!DOCTYPE html>
