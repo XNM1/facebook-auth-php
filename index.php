@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?= '<title>Wellcome,' . $_SESSION['USER_NAME'] . '</title>'; ?>
+    <?= '<title>Wellcome, ' . $_SESSION['USER_NAME'] . '</title>'; ?>
 </head>
 <body>
     <?= '<img src="http://graph.facebook.com/' . $_SESSION['USER_ID'] . '/picture?width=200"/>' ?>
