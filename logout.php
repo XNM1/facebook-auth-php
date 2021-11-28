@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if (isset($_SESSION['ACCESS_TOKEN'])) {
         $id = $_SESSION['USER_ID'];
 
